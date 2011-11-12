@@ -1,0 +1,8 @@
+<VirtualHost *:80>
+  ServerName dougal-lott.dev
+  DocumentRoot /Users/jamie/Sites/jgwhite/dougal-lott.com/public
+  <Directory /Users/jamie/Sites/jgwhite/dougal-lott.com/public>
+    Options +Indexes +FollowSymLinks
+  </Directory>
+</VirtualHost>
+
