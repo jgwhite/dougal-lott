@@ -49,12 +49,10 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
    Links
    ========================================================================== */
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:focus { outline: thin dotted; }
-
-/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
-a:hover, a:active { outline: 0; }
+a { color: #4c4c4c }
+a:hover { color: #666 }
+a:visited { color: #993366 }
+a:focus, a:active { outline: 0 }
 
 
 /* =============================================================================
