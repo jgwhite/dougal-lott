@@ -200,25 +200,125 @@ table { border-collapse: collapse; border-spacing: 0; }
    ========================================================================== */
 
 body {
-  font-family: Future, sans-serif;
+  font-family: Futura, sans-serif;
+  font-size: 20px;
+  color: #000;
+  line-height: 1.3;
+  padding: 26px;
+}
+
+#container {
+  margin: 0 auto;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  outline: 0;
+  color: #000;
+  background: #000;
+  margin: 48px 32px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 400;
 }
 
 header {}
-  h1 {}
-  h2 {}
-  ul {}
+  header h1 {
+    margin: 0 0 9px 0;
+    line-height: 1;
+  }
+  header h2 {
+    margin: 0 0 37px 0;
+    line-height: 1;
+  }
+  header ul {
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+  }
+    header li {
+      margin: 0;
+      padding: 0;
+    }
 
-#main {}
-  h2 {}
+#main {
+  overflow: hidden;
+  height: auto;
+}
+  #main > h2 {
+    margin: 0 0 16px 0;
+  }
 
-article {}
-  article h1 {}
-  article h2 {}
-  article a {}
+article {
+  width: 256px;
+  height: 256px;
+  display: block;
+  position: relative;
+  float: left;
+  margin: 8px;
+  font-size: 16px;
+}
+  article .container {
+    display: block;
+    position: relative;
+    width: 100%; height: 100%;
+  }
+  article img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  article .details {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+    article h1 {
+      font-size: 16px;
+      margin: 0;
+    }
+    article h2 {
+      font-size: 16px;
+      margin: 16px 0;
+    }
+    article a {}
 
 
-
-
+.csstransforms article {
+  -webkit-perspective: 1000px;
+}
+.csstransforms article .container {
+  -webkit-transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.6s;
+  z-index: 1000;
+}
+.csstransforms article img {
+  -webkit-backface-visibility: visible;
+  z-index: 2;
+}
+.csstransforms article .details {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, -1px) rotateY(180deg);
+  z-index: 1;
+}
+.csstransforms article:hover .container {
+  -webkit-transform: rotateY(-180deg);
+}
 
 
 /* =============================================================================
