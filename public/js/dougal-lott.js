@@ -1,32 +1,30 @@
+(function() {
+
 if (Modernizr.touch) {
 
+  var ignore = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
   $('body').bind('touchstart', function(e) {
-    var moved = false;
+    var target     = $(e.target),
+        article    = target.closest('article'),
+        moved      = false,
+        isArticle  = article.length > 0,
+        isFlipped  = article.hasClass('flipped'),
+        shouldFlip = isArticle && !isFlipped;
 
-    var doTap = function() {
+    $(this).one('touchmove', function() { moved = true });
+
+    if (shouldFlip) article.one('touchend', ignore);
+
+    setTimeout(function() {
       if (moved) return;
+      if (!isArticle || shouldFlip) $('article').removeClass('flipped');
+      if (shouldFlip) article.addClass('flipped');
+    }, 50);
 
-      var target  = $(e.target),
-          article = target.closest('article');
-
-      if (!article) return;
-
-      if (target.attr('href') && !article.hasClass('flipped')) {
-        target.one('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-        });
-      }
-
-      $('article').removeClass('flipped');
-      article.addClass('flipped');
-    }
-
-    $(this).
-    one('touchmove', function() { moved = true }).
-    one('touchend', doTap);
-
-    setTimeout(100, doTap);
   });
 
 } else if (Modernizr.csstransforms3d) {
@@ -38,8 +36,10 @@ if (Modernizr.touch) {
 } else {
 
   $('article').
-  mouseenter(function() { $(this).find('.details').animate({ opacity: 1 }, 'fast') }).
-  mouseleave(function() { $(this).find('.details').animate({ opacity: 0 }) });
+  mouseenter(function() { $(this).find('a').animate({ opacity: 1 }, 'fast') }).
+  mouseleave(function() { $(this).find('a').animate({ opacity: 0 }) });
 
 }
+
+})();
 
