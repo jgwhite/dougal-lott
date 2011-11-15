@@ -362,6 +362,7 @@ footer {}
 }
 
 .no-csstransforms3d article a {
+  background: #fff;
   opacity: 0;
   filter: alpha(opacity=0);
 }

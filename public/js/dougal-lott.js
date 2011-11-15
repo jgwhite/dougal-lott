@@ -36,7 +36,7 @@ if (Modernizr.touch) {
 } else {
 
   $('article').
-  mouseenter(function() { $(this).find('a').animate({ opacity: 1 }, 'fast') }).
+  mouseenter(function() { $(this).find('a').animate({ opacity: 0.9 }, 'fast') }).
   mouseleave(function() { $(this).find('a').animate({ opacity: 0 }) });
 
 }
