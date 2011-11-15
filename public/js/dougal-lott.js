@@ -23,7 +23,7 @@ if (Modernizr.touch) {
       if (moved) return;
       if (!isArticle || shouldFlip) $('article').removeClass('flipped');
       if (shouldFlip) article.addClass('flipped');
-    }, 50);
+    }, 100);
 
   });
 

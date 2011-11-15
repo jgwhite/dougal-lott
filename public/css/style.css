@@ -291,21 +291,22 @@ article {
     left: 0;
     right: 0;
     bottom: 0;
-    color: #000;
-  }
-  article a:hover,
-  article a:visited {
-    color: #000;
   }
     article .record {
       display: block;
       font-size: 16px;
       margin: 0;
+      color: #000;
     }
     article .credit {
       display: block;
       font-size: 16px;
       margin: 16px 0;
+      color: #000;
+    }
+    article .url {
+      display: block;
+      font-size: 14px;
     }
 
 footer {}
