@@ -341,24 +341,55 @@ footer {}
 
 .csstransforms3d article {
   -webkit-perspective: 1000px;
+     -moz-perspective: 1000px;
+      -ms-perspective: 1000px;
+       -o-perspective: 1000px;
+          perspective: 1000px;
 }
 .csstransforms3d article .container {
   -webkit-transform: rotateY(0deg);
+     -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+       -o-transform: rotateY(0deg);
   -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   -webkit-transition: 0.6s;
+     -moz-transition: 0.6s;
+      -ms-transition: 0.6s;
+       -o-transition: 0.6s;
+          transition: 0.6s;
   z-index: 1000;
 }
 .csstransforms3d article img {
   -webkit-backface-visibility: visible;
+     -moz-backface-visibility: visible;
+      -ms-backface-visibility: visible;
+       -o-backface-visibility: visible;
+          backface-visibility: visible;
   z-index: 2;
 }
 .csstransforms3d article a {
   -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+       -o-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, -1px) rotateY(180deg);
+     -moz-transform: translate3d(0, 0, -1px) rotateY(180deg);
+      -ms-transform: translate3d(0, 0, -1px) rotateY(180deg);
+       -o-transform: translate3d(0, 0, -1px) rotateY(180deg);
+          transform: translate3d(0, 0, -1px) rotateY(180deg);
   z-index: 1;
 }
 .csstransforms3d article.flipped .container {
   -webkit-transform: rotateY(-180deg);
+     -moz-transform: rotateY(-180deg);
+      -ms-transform: rotateY(-180deg);
+       -o-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }
 
 .no-csstransforms3d article a {
